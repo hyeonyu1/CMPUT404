@@ -1,0 +1,19 @@
+Q1. 
+    https://github.com/hyeonyu1
+Q2.
+    2.22.0
+Q3. 
+  2.22.0
+Q4. 
+  It’s the same
+Q5. 
+  OK 200
+  Fully functional page
+Q6.?????????????
+  HTTP/2 418 returned by curl -i curl -iL
+  When I curl, it returns everything about the page
+Q7.
+
+Q8.
+   https://raw.githubusercontent.com/hyeonyu1/CMPUT404Lab1/master/question2.py
+  
