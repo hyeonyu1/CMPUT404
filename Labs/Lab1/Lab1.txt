@@ -3,17 +3,31 @@ Q1.
 Q2.
     2.22.0
 Q3. 
-  2.22.0
+    2.22.0
 Q4. 
-  It’s the same
+    It’s the same
 Q5. 
-  OK 200
-  Fully functional page
-Q6.?????????????
-  HTTP/2 418 returned by curl -i curl -iL
-  When I curl, it returns everything about the page
+    OK 200
+    Fully functional page
+Q6.
+  curl -i: 301 Moved Permanently
+  curl -iL: 301 Moved Permanently
+	    418 
+  curl: does not return any status code but returns everything about the page 
 Q7.
+  Using -X POST, it changes Form Contents by changing 
+"<H3>Form Contents:</H3>
+<P>No form fields.
+<DL>"
+into 
+"<H3>Form Contents:</H3>
+<DL>
+<DT>X: <i>&lt;type 'instance'&gt;</i>
+<DD>MiniFieldStorage('X', 'Y')
+</DL>"
 
+Since -X specifies by a custom request method to use to communicate with the HTTP server, by writing POST, it overrides the default method of GET and do a POST request.
+Method is useful to make POST request, POST send data to a receiving web application.
 Q8.
-   https://raw.githubusercontent.com/hyeonyu1/CMPUT404Lab1/master/question2.py
+   https://raw.githubusercontent.com/hyeonyu1/CMPUT404/master/Labs/Lab1/question2.py
   
