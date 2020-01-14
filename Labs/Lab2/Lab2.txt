@@ -1,0 +1,20 @@
+Q1.
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+Q2.
+    Server socket is used to bind to a port and listens for a connection initiated by a client
+    Client socket is used to connect and listen to a server
+
+Q3.
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    socket.SO_REUSEADDR allows reuse of same port for binding
+
+Q4.
+   - address
+   - port
+
+Q5.
+   data or message sent from client in bytes
+
+Q6.
+   https://github.com/hyeonyu1/CMPUT404/tree/master/Labs/Lab2
