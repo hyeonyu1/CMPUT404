@@ -1,7 +1,9 @@
 import socket
 
-
-def get_remote_ip():
+HOST = "localhost"
+PORT = 8001
+BUFFER_SIZE = 1024
+def get_remote_ip(host):
 
     try:
         remote_ip = socket.gethostbyname(host)
@@ -18,17 +20,17 @@ def main():
 
     host = "www.google.com"
     port = 80
-    with socket.socket(socket.AF_INET, socket.SOCK_Stream) as proxy_start:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as proxy_start:
         print("Starting proxy server")
         proxy_start.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR , 1)
         proxy_start.bind((HOST, PORT))
         proxy_start.listen(1)
         while True:
             conn, addr = proxy_start.accept()
-            with socket.socet(socket.AF_INET, soclet.SOCK_STREAM) as proxy_end:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as proxy_end:
 
                 print("Connecting to GOOGLE")
-                remote_ip - get_remote_ip(host)
+                remote_ip = get_remote_ip(host)
 
                 proxy_end.connect((remote_ip, port))
 

@@ -16,7 +16,7 @@ def connect(addr):
 
         full_data = s.recv(BUFFER_SIZE)
         print(full_data)
-    except EXCEPTION as e:
+    except Exception as e:
         print(e)
     finally:
         s.close()
@@ -26,5 +26,5 @@ def main():
     connect(('127.0.0.1', 8001))
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     main()
