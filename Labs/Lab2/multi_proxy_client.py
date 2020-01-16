@@ -24,9 +24,10 @@ def connect(addr):
 
 
 def main():
-    connect(('127.0.0.1', 8001))
+    #connect(('127.0.0.1', 8001))
+    address = [("127.0.0.1",8001)]
     with Pool() as p:
-        p.map(connect, addres*10)
+        p.map(connect, address*10)
 
 
 if __name__ == "__main__":

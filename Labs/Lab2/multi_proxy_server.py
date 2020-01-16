@@ -37,7 +37,7 @@ def main():
         while True:
             conn, addr = proxy_start.accept()
             print("Connected by", addr)
-            with socket.socket(socket.AF_INET, soclet.SOCK_STREAM) as proxy_end:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as proxy_end:
 
                 print("Connecting to GOOGLE")
                 remote_ip = get_remote_ip(host)
